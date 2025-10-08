@@ -38,9 +38,9 @@ From here, administrators can open any section to perform management tasks effic
 The **Manage People** section provides a centralized dashboard displaying all registered individuals with options to **search**, **filter**, **update**, and **delete** records.  
 Users can dynamically filter and search for people based on various fields such as **Name**, **National Number**, or other attributes, allowing for quick and efficient data access.
 
-![Manage People Screenshot](Screenshots/ManagePeopleList.png)
-![Filters Screenshot](Screenshots/ManagePeopleFilters.png)
-![Filtering Screenshot](Screenshots/ManagePeopleFilter.png)
+![Manage People Screenshot](assets/ManagePeopleList.png)
+![Filters Screenshot](assets/ManagePeopleFilters.png)
+![Filtering Screenshot](assets/ManagePeopleFilter.png)
 
 ---
 
@@ -73,14 +73,14 @@ Allows administrators to add new people to the database with live validation to 
 ### Show Person Details
 Displays complete personal information, including photo and contact details.  
 
-![Person Details](Screenshots/PersonDetails.png)
+![Person Details](assets/PersonDetails.png)
 
 ---
 
 ### Update Person
 Enables editing and updating existing records with validation and automatic UI refresh.  
 
-![Update/Edit Person](Screenshots/UpdatePerson.png)
+![Update/Edit Person](assets/UpdatePerson.png)
 
 ---
 
