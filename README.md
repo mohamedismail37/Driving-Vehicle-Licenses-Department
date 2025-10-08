@@ -108,5 +108,5 @@ Enables editing and updating existing records with validation and automatic UI r
 
 ## Screenshots
 
-You can place all screenshots inside a `/Screenshots` folder:
+You can place all screenshots inside a `/assets` folder:
 
