@@ -24,10 +24,40 @@ The project follows the **3-Tier Architecture**:
 
 ## Main Features
 
+### Main Page (Dashboard)
+
+The main page serves as the system’s control panel, allowing users to quickly access all modules such as **Applications**, **People**, **Users**, **Drivers**, and **Licenses**.  
+From here, administrators can open any section to perform management tasks efficiently.
+
+![Main Page Screenshot](assets/Main.png)
+
+---
+
+### Manage People List and Filtering
+
+The **Manage People** section provides a centralized dashboard displaying all registered individuals with options to **search**, **filter**, **update**, and **delete** records.  
+Users can dynamically filter and search for people based on various fields such as **Name**, **National Number**, or other attributes, allowing for quick and efficient data access.
+
+![Manage People Screenshot](Screenshots/ManagePeopleList.png)
+![Filters Screenshot](Screenshots/ManagePeopleFilters.png)
+![Filtering Screenshot](Screenshots/ManagePeopleFilter.png)
+
+---
+
+### Context List
+A context menu for quick actions such as viewing details, editing, or deleting directly from the Manage People list.  
+
+![Manage People Context List](assets/ContextList.png)
+
+---
+
 ### Add New Person
 Allows administrators to add new people to the database with live validation to avoid repeated unique attributes such as National Number.  
 
-*Screenshot: AddNewPerson*
+![Add New Person](assets/AddNewPerson.png)
+
+![Live Validation with DB on National No. to avoid repetition](assets/LiveValidation.png)
+
 
 ---
 
@@ -36,42 +66,21 @@ Allows administrators to add new people to the database with live validation to 
 - Performs live database validation for unique attributes.
 - Displays error messages for invalid input.  
 
-*Screenshot: Validation Example*
-
----
-
-### Context List
-A context menu for quick actions such as viewing details, editing, or deleting directly from the Manage People list.  
-
-*Screenshot: Context List Example*
-
----
-
-### Filtering and Searching
-Allows users to filter and search for people dynamically based on various fields such as name or national number, etc.  
-
-*Screenshot: Filtering Example*
+![Validation on Textboxs during add new person](assets/AddPersonValidation.png)
 
 ---
 
 ### Show Person Details
 Displays complete personal information, including photo and contact details.  
 
-*Screenshot: Person Details*
+![Person Details](Screenshots/PersonDetails.png)
 
 ---
 
 ### Update Person
 Enables editing and updating existing records with validation and automatic UI refresh.  
 
-*Screenshot: Update Person*
-
----
-
-### Manage People List
-A centralized dashboard displaying all records with options to search, filter, update, and delete.  
-
-*Screenshot: Manage People List*
+![Update/Edit Person](Screenshots/UpdatePerson.png)
 
 ---
 
