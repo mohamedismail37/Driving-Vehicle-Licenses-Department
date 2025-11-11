@@ -20,7 +20,7 @@ namespace DVLD
 
         private void _RefreshPeopleList()
         {
-            dgvAllPeople.DataSource = BLL.GetAllPeople();
+            dgvAllPeople.DataSource = clsPerson.GetAllPeople();
             lblNumRecords.Text = dgvAllPeople.RowCount.ToString();
 
         }
@@ -65,7 +65,7 @@ namespace DVLD
         private void tbFilteration_TextChanged(object sender, EventArgs e)
         {
             string filterText = tbFilteration.Text.Trim();
-            DataView dv = BusinessLogicLayer.BLL.GetAllPeople().DefaultView;
+            DataView dv = clsPerson.GetAllPeople().DefaultView;
             if (filterText.Length > 0)
             {
                 switch (cbFiltartion.SelectedIndex)
@@ -105,7 +105,7 @@ namespace DVLD
                         }
                         else
                         {
-                            dgvAllPeople.DataSource = BusinessLogicLayer.BLL.GetAllPeople();
+                            dgvAllPeople.DataSource = clsPerson.GetAllPeople();
                         }
                         dgvAllPeople.DataSource = dv;
 
@@ -155,7 +155,7 @@ namespace DVLD
         {
             if (MessageBox.Show("Are you sure do you want to delete this person?", "Delete Person", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (BLL.DeletePerson((int)dgvAllPeople.CurrentRow.Cells[0].Value))
+                if (clsPerson.DeletePerson((int)dgvAllPeople.CurrentRow.Cells[0].Value))
                 {
                     MessageBox.Show("Person Deleted Successfully", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _RefreshPeopleList();

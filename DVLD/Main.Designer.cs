@@ -133,6 +133,7 @@
             this.Controls.Add(this.btnPeople);
             this.Controls.Add(this.btnApplications);
             this.Controls.Add(this.pictureBox1);
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMain";
             this.Text = "Main";

@@ -74,13 +74,7 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbGender = new System.Windows.Forms.GroupBox();
-            this.epFirstName = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epSecondName = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epLastName = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epNationalNo = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epPhoneNo = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epWrongEmailAddress = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epAddress = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -94,13 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gbGender.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.epFirstName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epSecondName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epLastName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epNationalNo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epPhoneNo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epWrongEmailAddress)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAddEditPerson
@@ -276,7 +264,7 @@
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(100, 20);
             this.tbFirstName.TabIndex = 54;
-            this.tbFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.tbFirstName_Validating);
+            this.tbFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // tbSecondName
             // 
@@ -284,7 +272,7 @@
             this.tbSecondName.Name = "tbSecondName";
             this.tbSecondName.Size = new System.Drawing.Size(100, 20);
             this.tbSecondName.TabIndex = 55;
-            this.tbSecondName.Validating += new System.ComponentModel.CancelEventHandler(this.tbSecondName_Validating);
+            this.tbSecondName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // tbThirdName
             // 
@@ -299,7 +287,6 @@
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(100, 20);
             this.tbLastName.TabIndex = 57;
-            this.tbLastName.Validating += new System.ComponentModel.CancelEventHandler(this.tbLastName_Validating);
             // 
             // tbNationalNo
             // 
@@ -398,7 +385,6 @@
             this.tbPhone.Size = new System.Drawing.Size(95, 20);
             this.tbPhone.TabIndex = 67;
             this.tbPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPhone_KeyPress);
-            this.tbPhone.Validating += new System.ComponentModel.CancelEventHandler(this.tbPhone_Validating);
             // 
             // label3
             // 
@@ -451,6 +437,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -503,7 +490,7 @@
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Size = new System.Drawing.Size(341, 55);
             this.tbAddress.TabIndex = 71;
-            this.tbAddress.Validating += new System.ComponentModel.CancelEventHandler(this.tbAddress_Validating);
+            this.tbAddress.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // pictureBox9
             // 
@@ -524,6 +511,7 @@
             this.groupBox1.Size = new System.Drawing.Size(595, 268);
             this.groupBox1.TabIndex = 79;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // gbGender
             // 
@@ -537,38 +525,16 @@
             this.gbGender.TabIndex = 65;
             this.gbGender.TabStop = false;
             // 
-            // epFirstName
+            // errorProvider1
             // 
-            this.epFirstName.ContainerControl = this;
-            // 
-            // epSecondName
-            // 
-            this.epSecondName.ContainerControl = this;
-            // 
-            // epLastName
-            // 
-            this.epLastName.ContainerControl = this;
-            // 
-            // epNationalNo
-            // 
-            this.epNationalNo.ContainerControl = this;
-            // 
-            // epPhoneNo
-            // 
-            this.epPhoneNo.ContainerControl = this;
-            // 
-            // epWrongEmailAddress
-            // 
-            this.epWrongEmailAddress.ContainerControl = this;
-            // 
-            // epAddress
-            // 
-            this.epAddress.ContainerControl = this;
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmAddEditPersonInfo
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(613, 381);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.LLSetImage);
@@ -608,6 +574,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblAddEditPerson);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddEditPersonInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add / Edit Person Info.";
@@ -627,13 +594,7 @@
             this.groupBox1.PerformLayout();
             this.gbGender.ResumeLayout(false);
             this.gbGender.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.epFirstName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epSecondName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epLastName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epNationalNo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epPhoneNo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epWrongEmailAddress)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -684,12 +645,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox gbGender;
-        private System.Windows.Forms.ErrorProvider epFirstName;
-        private System.Windows.Forms.ErrorProvider epSecondName;
-        private System.Windows.Forms.ErrorProvider epLastName;
-        private System.Windows.Forms.ErrorProvider epNationalNo;
-        private System.Windows.Forms.ErrorProvider epPhoneNo;
-        private System.Windows.Forms.ErrorProvider epWrongEmailAddress;
-        private System.Windows.Forms.ErrorProvider epAddress;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

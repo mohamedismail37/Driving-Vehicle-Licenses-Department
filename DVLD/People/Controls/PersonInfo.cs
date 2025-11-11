@@ -38,23 +38,23 @@ namespace DVLD
 
             this.PersonID.Text = PersonID.ToString();
 
-            DataTable dt = BLL.FillInfoUpdatePerson(PersonID);
+            clsPerson _Person = clsPerson.Find(PersonID);
 
-            DataRow row = dt.Rows[0];
 
-            NationalNo.Text = row["NationalNo"].ToString();
-            Name.Text = row["FirstName"].ToString() + ' ' + row["SecondName"].ToString() + ' ' + row["ThirdName"].ToString() + ' ' + row["LastName"].ToString();
-            DateOfBirth.Text = row["DateOfBirth"].ToString();
-            Country.Text = (row["NationalityCountryID"].ToString());
-            if (row["Gendor"].ToString() == "1")
+            NationalNo.Text = _Person.NationalNo;
+            Name.Text = _Person.FullName;
+            DateOfBirth.Text = _Person.DateOfBirth.ToString();
+            Country.Text = _Person.CountryInfo.CountryName;
+
+            if (_Person.Gender == 1)
                 Gender.Text = "Female";
             else
                 Gender.Text = "Male";
 
-            Phone.Text = row["Phone"].ToString();
-            Email.Text = row["Email"].ToString();
-            Address.Text = row["Address"].ToString();
-            pbPersonDetails.ImageLocation = row["ImagePath"].ToString();
+            Phone.Text = _Person.Phone;
+            Email.Text = _Person.Email;
+            Address.Text = _Person.Address;
+            pbPersonDetails.ImageLocation = _Person.ImagePath;
         }
 
         private void llEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
