@@ -74,9 +74,18 @@ It is built with a clear focus on clean architecture, data validation, and maint
 |--------------------|--------------|
 | ![](assets/People%20Management/ManagePeopleList.png) | ![](assets/People%20Management/ManagePeopleContextMenu.png) |
 
-| All Filters | Filter Used |
-|-------------|-------------|
+| All Filters | Filter applied |
+|-------------|----------------|
 | ![](assets/People%20Management/ManagePeopleFilters.png) | ![](assets/People%20Management/ManagePeopleFilter.png) |
+
+| Show Person Card | Update Person Info |
+|------------------|--------------------|
+| ![](assets/People%20Management/PersonDetails.png) | ![](assets/People%20Management/UpdatePerson.png) |
+
+#### Add New Person:
+| Validation for entities | Live validatoin with DB | 
+|-------------------------|-------------------------|
+| ![](assets/People%20Management/AddNewPersonValidation.png) | ![](assets/People%20Management/LiveValidation.png) |
 
 ---
 
