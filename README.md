@@ -8,7 +8,7 @@
 <h3 align="center">Driving Vehicle Licenses Department</h3>
 
 ### About The Project
-> **DVLD** Developed a **C# .NET** Desktop application simulating real-world driver’s license issuance workflows
+> **DVLD** is a **C# .NET** Desktop application simulating real-world driver’s license issuance workflows
 
 ---
 ## Table of Contents
@@ -17,11 +17,15 @@
   - [Overview](#overview)
   - [Objectives](#objectives)
   - [Built With](#built-with)
-- [Main Features](#main-features)
-- [Screenshots / UI Preview](#-screenshots--ui-preview)
-- [Architecture & Database Design](#-architecture--database-design)
-- [File Structure](#-file-structure)
-- [Future Enhancements](#-future-enhancements)
+- [Main Features & ScreenShots](#main-features)
+  - [Authentication & Account Management](#Authentication-&-Account-Management)
+  - [People Management](#People-Management)
+  - [Users Management](#Users-Management)
+  - [Applications & Test Types](#Applications-&-Test-Types)
+- [Architecture & Database Design](#architecture--database-design)
+- [Technical Highlights](#Technical-Highlights)
+- [File Structure](#file-structure)
+- [Future Enhancements](#future-enhancements)
 
 ---
 ## Project Description
@@ -61,7 +65,7 @@ It is built with a clear focus on clean architecture, data validation, and maint
 | ![](assets/Login.png) | ![](assets/Users%20Management/MainAccountSettingsMenu.png) | 
 
 ---
-###  People Management
+### People Management
 - View & List all people in a DataGridView
 - Advanced filtering (Person ID, Name, Email, etc.)
 - Input validation (letters-only for names, numbers-only for IDs)
@@ -122,7 +126,7 @@ It is built with a clear focus on clean architecture, data validation, and maint
 
 ---
 
-### 🗂 Applications & Test Types
+### Applications & Test Types
 - List and manage application types
 - Update application settings
 - List and update test types
@@ -142,14 +146,17 @@ It is built with a clear focus on clean architecture, data validation, and maint
 | ![](assets/Applications/Application%20Types/ManageApplicationTypesContextMenu.png) | ![](assets/Applications/Application%20Types/UpdateApplicationType.png) |
 
 
+### Screenshots
+You can place all screenshots inside a `/assets` folder:
+
 ---
-## Architecture
+## Architecture & Database Design
 
 The project follows the **3-Tier Architecture**:
 
 1. **Presentation Layer (UI):**
    - Built with Windows Forms.
-   - Handles all user interactions, such as buttons, forms, validation on the UI tier and DataGridViews.
+   - Handles all user interactions, such as buttons, forms, and validation on the UI tier.
 
 2. **Business Logic Layer (BLL):**
    - Contains the core application logic and rules.
@@ -160,31 +167,42 @@ The project follows the **3-Tier Architecture**:
    - Uses ADO.NET to interact with SQL Server.
    - Responsible for all CRUD operations (Create, Read, Update, Delete).
 
----
+This separation ensures:
+- High maintainability
+- Easier testing and debugging
+- Clean, scalable codebase
 
+### Database Design
+- SQL Server database with **13 normalized tables**
+- Proper use of:
+  - Primary & Foreign Keys
+  - NOT NULL & NULL constraints
+  - Relationships between entities
+- Designed following **database normal forms (1NF → 3NF)**
+
+---
 ## Technical Highlights
-
-- 3-Tier Architecture (UI, BLL, DAL)
-- Full CRUD Operations (Create, Read, Update, Delete)
-- Data Validation and Error Handling
-- Live Database Validation for Unique Fields
-- Role-Based Access Control
-- Image Handling and Storage
-- Dynamic Search and Filtering
-- Structured and Maintainable Codebase
-
----
-
-## Technologies Used
-
-- **Language:** C# (.NET Framework, WinForms)
-- **Database:** Microsoft SQL Server
-- **Architecture:** 3-Tier (Presentation, Business Logic, Data Access)
-- **Libraries:** ADO.NET, System.Data, System.IO
+- **3-Tier Architecture:** Separation of Presentation, Business Logic, and Data Access layers for maintainability and scalability.  
+- **Full CRUD Operations:** Implemented for all core entities with proper validation and error handling.  
+- **WinForms UI:** User-friendly desktop interface with DataGridViews, filtering, context menus, and masked input fields.  
+- **ADO.NET & SQL Server:** Efficient database interactions, normalized tables, relationships, and constraints.  
+- **Input Validation & Security:** Live validation in forms, type restrictions, masked passwords, and safe deletion logic.  
+- **Reusable Components:** Custom controls for repeated UI patterns, such as PersonCardWithFilters.  
+- **Structured File Organization:** Separate projects for Presentation, Business Logic, and Data Access layers.  
+- **Scalable & Extensible:** Designed to allow adding new features or tables without major refactoring.  
 
 ---
 
-## Screenshots
-
-You can place all screenshots inside a `/assets` folder:
+## File Structure
+                                    
+Driving-Vehicle-Licenses-Department/
+├── BusinessLogicLayer/ # Contains core business logic and rules
+├── DataAccessLayer/ # Handles all database interactions using ADO.NET
+├── DVLD/ # Presentation layer with WinForms UI
+├── assets/ # Screenshots and images organized by feature
+│ ├── Applications/
+│ ├── People Management/
+│ ├── Users Management/
+│ └── Test Types/
+├── README.md # Project documentation
 
