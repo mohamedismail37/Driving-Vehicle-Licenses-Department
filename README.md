@@ -88,55 +88,37 @@ It is built with a clear focus on clean architecture, data validation, and maint
 | ![](assets/People%20Management/AddNewPersonValidation.png) | ![](assets/People%20Management/LiveValidation.png) |
 
 ---
+### Users Management
+- View all system users with filtering options
+- Filter by User ID, Person ID, or Active status
+- Add new users by linking them to existing people
+- Prevent duplicate usernames (live database validation)
+- Update user information
+- Change user passwords
+- Delete users only if not linked to critical data
 
-### Manage People List and Filtering
+#### Add New User:
+| Find Person with filters | Fill User Info | Save Data |
+|--------------------------|----------------|-----------|
+| ![](assets/Users%20Management/AddNewUser4.png) | ![](assets/Users%20Management/AddNewUser2.png) | ![](assets/Users%20Management/AddNewUser3.png) 
 
-The **Manage People** section provides a centralized dashboard displaying all registered individuals with options to **search**, **filter**, **update**, and **delete** records.  
-Users can dynamically filter and search for people based on various fields such as **Name**, **National Number**, or other attributes, allowing for quick and efficient data access.
+#### Manage Users:
+| Manage Users with Filters | Context Menu | 
+|---------------------------|--------------|
+| ![](assets/Users%20Management/ManageUsersFilter1.png) | ![](assets/People%20Management/ManageUsersContextMenu.png) |
 
-![Manage People Screenshot](assets/ManagePeopleList.png)
-![Filters Screenshot](assets/ManagePeopleFilters.png)
-![Filtering Screenshot](assets/ManagePeopleFilter.png)
+#### Update User:
+| Show person Info | Update User Info | 
+|------------------|------------------|
+| ![](assets/Users%20Management/UpdateUser1.png) | ![](assets/People%20Management/UpdateUser2.png) |
 
----
+#### Change Password:
+| Validation on previous password | Validation for new password | 
+|---------------------------------|-----------------------------|
+| ![](assets/Users%20Management/ChangePassword1.png) | ![](assets/People%20Management/ChangePassword2.png) |
 
-### Context List
-A context menu for quick actions such as viewing details, editing, or deleting directly from the Manage People list.  
-
-![Manage People Context List](assets/ContextList.png)
-
----
-
-### Add New Person
-Allows administrators to add new people to the database with live validation to avoid repeated unique attributes such as National Number.  
-
-![Add New Person](assets/AddNewPerson.png)
-
-![Live Validation with DB on National No. to avoid repetition](assets/LiveValidation.png)
-
-
----
-
-### Validation System
-- Prevents saving empty textboxes.
-- Performs live database validation for unique attributes.
-- Displays error messages for invalid input.  
-
-![Validation on Textboxs during add new person](assets/AddPersonValidation.png)
-
----
-
-### Show Person Details
-Displays complete personal information, including photo and contact details.  
-
-![Person Details](assets/PersonDetails.png)
-
----
-
-### Update Person
-Enables editing and updating existing records with validation and automatic UI refresh.  
-
-![Update/Edit Person](assets/UpdatePerson.png)
+#### Show User Card:
+![Show User Card](assets/Users%20Management/UserCard.png)
 
 ---
 
