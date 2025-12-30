@@ -105,17 +105,17 @@ It is built with a clear focus on clean architecture, data validation, and maint
 #### Manage Users:
 | Manage Users with Filters | Context Menu | 
 |---------------------------|--------------|
-| ![](assets/Users%20Management/ManageUsersFilter1.png) | ![](assets/People%20Management/ManageUsersContextMenu.png) |
+| ![](assets/Users%20Management/ManageUsersFilter1.png) | ![](assets/Users%20Management/ManageUsersContextMenu.png) |
 
 #### Update User:
 | Show person Info | Update User Info | 
 |------------------|------------------|
-| ![](assets/Users%20Management/UpdateUser1.png) | ![](assets/People%20Management/UpdateUser2.png) |
+| ![](assets/Users%20Management/UpdateUser1.png) | ![](assets/Users%20Management/UpdateUser2.png) |
 
 #### Change Password:
 | Validation on previous password | Validation for new password | 
 |---------------------------------|-----------------------------|
-| ![](assets/Users%20Management/ChangePassword1.png) | ![](assets/People%20Management/ChangePassword2.png) |
+| ![](assets/Users%20Management/ChangePassword1.png) | ![](assets/Users%20Management/ChangePassword2.png) |
 
 #### Show User Card:
 ![Show User Card](assets/Users%20Management/UserCard.png)
