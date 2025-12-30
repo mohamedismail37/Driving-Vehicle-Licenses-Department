@@ -194,15 +194,18 @@ This separation ensures:
 ---
 
 ## File Structure
-                                    
+                            
 Driving-Vehicle-Licenses-Department/
-├── BusinessLogicLayer/ # Contains core business logic and rules
-├── DataAccessLayer/ # Handles all database interactions using ADO.NET
-├── DVLD/ # Presentation layer with WinForms UI
-├── assets/ # Screenshots and images organized by feature
-│ ├── Applications/
-│ ├── People Management/
-│ ├── Users Management/
-│ └── Test Types/
-├── README.md # Project documentation
+├── BusinessLogicLayer/       # Contains core business logic and rules
+├── DataAccessLayer/          # Handles all database interactions using ADO.NET
+├── DVLD/                     # Presentation layer with WinForms UI
+├── assets/                   # Screenshots and images organized by feature
+│   ├── Applications/
+│   ├── People Management/
+│   ├── Users Management/
+│   └── Test Types/
+├── README.md                 # Project documentation
+
+
+
 
