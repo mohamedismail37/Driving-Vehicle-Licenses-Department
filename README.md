@@ -135,11 +135,11 @@ It is built with a clear focus on clean architecture, data validation, and maint
 #### Manage Application Types:
 | Application Menu in Dashboard | List Application Types | 
 |-------------------------------|------------------------|
-| ![](assets/Applications/MainApplicationsMenu.png) | ![](assets/Applications/Application%20Type/ManageApplicationTypes.png) |
+| ![](assets/Applications/MainApplicationsMenu.png) | ![](assets/Applications/Application%20Types/ManageApplicationTypes.png) |
 
 | Context Menu | Update Application Type | 
 |--------------|-------------------------|
-| ![](assets/Applications/Application%20Type/ManageApplicationTypesContextMenu.png) | ![](assets/Applications/Application%20Type/UpdateApplicationType.png) |
+| ![](assets/Applications/Application%20Types/ManageApplicationTypesContextMenu.png) | ![](assets/Applications/Application%20Types/UpdateApplicationType.png) |
 
 
 ---
