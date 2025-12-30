@@ -49,7 +49,7 @@ namespace DVLD.Global_Classes
             // Project Images folder after renaming it
             // with GUID with the same extension, then it will update the sourceFileName with the new name
 
-            string DestinationFolder = @"C:\\Users\\moham\\Desktop\\C19)Full Real Project\\DVLD\\DVLD-People-Images";
+            string DestinationFolder = @"C:\Users\moham\Desktop\C19)Full Real Project\DVLD-Project\DataAccessLayer\DVLD-People-Images\";
 
             if (!CreateFolderIfDoesNotExist(DestinationFolder))
                 return false;

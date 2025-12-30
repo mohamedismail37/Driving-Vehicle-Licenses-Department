@@ -511,7 +511,6 @@
             this.groupBox1.Size = new System.Drawing.Size(595, 268);
             this.groupBox1.TabIndex = 79;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // gbGender
             // 

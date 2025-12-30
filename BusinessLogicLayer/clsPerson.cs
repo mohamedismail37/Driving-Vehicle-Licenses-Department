@@ -179,7 +179,7 @@ namespace BusinessLogicLayer
         }
         public static bool DeletePerson(int ID)
         {
-            return clsPerson.DeletePerson(ID);
+            return clsPersonData.DeletePerson(ID);
         }
         public static bool isPersonExist(int ID)
         {

@@ -23,7 +23,7 @@ namespace BusinessLogicLayer
         private clsCountry(int ID, string Country)
         {
             this.ID = ID;
-            this.CountryName = CountryName;
+            this.CountryName = Country;
         }
 
         public static clsCountry Find(int ID)

@@ -192,7 +192,7 @@ namespace DVLD
         private void btnSave_Click(object sender, EventArgs e)
         {
             //_ValidateAllForm(); Instead of this, he did this: 
-            if (!this.ValidateChildren()) // ValidateChildren() -> Depends on Checking all [Buttons, TextBoxs, etc] which conected to the general function ValidateEmptyTextBox(-) 
+            if (!this.ValidateChildren()) // ValidateChildren() -> checks controls with Validating events 
             {
                 MessageBox.Show("Some fields are NOT valid! Put the mouse on Red Icon(s) to see the error", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -237,6 +237,8 @@ namespace DVLD
 
                 // Trigger the event to send data back to the caller form.
                 DataBack?.Invoke(this, _Person.PersonID);
+                // & the DataBack?.Invoke(Parameters) here, specifically.
+                // Because if the I Added a new person (that's the condition), I want to return it's ID to the prev form.
             }
             else
                 MessageBox.Show("Error: Data is NOT Saved Successfully.", "Error", MessageBoxButtons.OK);
@@ -317,8 +319,11 @@ namespace DVLD
             }
             else if (clsPerson.isPersonExist(tbNationalNo.Text)) // Checks that the National Number isn't used for other person
             {
-                e.Cancel = true;
-                errorProvider1.SetError(tbNationalNo, "National Number is used for another person");
+                if (!(_CurrentMode == enModes.EditPerson && tbNationalNo.Text == _Person.NationalNo))
+                {
+                    e.Cancel = true;
+                    errorProvider1.SetError(tbNationalNo, "National Number is used for another person");
+                }
             }
             else
             {

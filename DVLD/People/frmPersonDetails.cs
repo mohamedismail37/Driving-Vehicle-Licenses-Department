@@ -12,17 +12,10 @@ namespace DVLD
 {
     public partial class frmPersonDetails: Form
     {
-        int personID = -1;
-        public frmPersonDetails()
-        {
-            InitializeComponent();
-        }
-
         public frmPersonDetails(int PersonID)
         {
             InitializeComponent();
-            ucPersonInfo.UpdatePersonInfo(PersonID);
-            personID = PersonID;
+            this.ucPersonInfo.LoadPersonInfo(PersonID);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -30,9 +23,5 @@ namespace DVLD
             this.Close();
         }
 
-        private void frmPersonDetails_Load(object sender, EventArgs e)
-        {
-            ucPersonInfo.UpdatePersonInfo(personID);
-        }
     }
 }

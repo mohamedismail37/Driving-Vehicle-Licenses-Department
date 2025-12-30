@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPersonDetails));
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.ucPersonInfo = new DVLD.PersonInfo();
+            this.ucPersonInfo = new DVLD.ctrlPersonCard();
             this.SuspendLayout();
             // 
             // label1
@@ -73,10 +73,11 @@
             this.Controls.Add(this.ucPersonInfo);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPersonDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Person Details";
-            this.Load += new System.EventHandler(this.frmPersonDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,6 +87,6 @@
 
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
-        private PersonInfo ucPersonInfo;
+        private ctrlPersonCard ucPersonInfo;
     }
 }

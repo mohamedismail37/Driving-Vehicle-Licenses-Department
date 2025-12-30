@@ -87,7 +87,7 @@ namespace DataAccessLayer
 
             SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("@NationalNo", PersonID);
+            command.Parameters.AddWithValue("@NationalNo", NationalNo);
 
             try
             {
@@ -169,7 +169,7 @@ namespace DataAccessLayer
             command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
             command.Parameters.AddWithValue("@Gender", Gender);
             command.Parameters.AddWithValue("@Phone", Phone);
-            command.Parameters.AddWithValue("@CountryID", NationalityCountryID);
+            command.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
             command.Parameters.AddWithValue("@Address", Address);
 
             if (Email != "" && Email != null)
@@ -237,11 +237,11 @@ namespace DataAccessLayer
             command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
             command.Parameters.AddWithValue("@Gender", Gender);
             command.Parameters.AddWithValue("@Phone", Phone);
-            command.Parameters.AddWithValue("@CountryID", NationalityCountryID);
+            command.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
             command.Parameters.AddWithValue("@Address", Address);
 
             
-            if (ImagePath != "")
+            if (ImagePath != "" && ImagePath != null)
                 command.Parameters.AddWithValue("@ImagePath", (ImagePath));
             else
                 command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
@@ -321,7 +321,7 @@ namespace DataAccessLayer
         }
         public static bool DeletePerson(int PersonID)
         {
-            if (_IsUser(PersonID) || _IsApplicant(PersonID))
+            if (clsUserData.IsUserExist(PersonID) || _IsApplicant(PersonID))
                 return false;
 
             int rowsAffected = 0;
@@ -419,36 +419,6 @@ namespace DataAccessLayer
 
         ////////////////////////////////////////////////////////////
         // MINE //
-        private static bool _IsUser(int PersonID)
-        {
-            bool IsUser = false;
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = "Select Found = 1 from Users where PersonID = @PersonID";
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@PersonID", PersonID);
-
-            try
-            {
-                connection.Open();
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                IsUser = reader.HasRows;
-
-            }
-            catch (Exception ex)
-            {
-                // To logs later
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return IsUser;
-        }
         private static bool _IsApplicant(int PersonID)
         {
             bool IsApplicant = false;
