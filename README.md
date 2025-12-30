@@ -58,7 +58,7 @@ It is built with a clear focus on clean architecture, data validation, and maint
 
 | Login | Main Screen with account setting menu |
 |-------|---------------------------------------|
-| ![](assets/Login.png) | ![](assets/Users-Management\MainAccountSettingsMenu.png) | 
+| ![](assets/Login.png) | ![](assets/Users%20Management\MainAccountSettingsMenu.png) | 
 
 
 ---
