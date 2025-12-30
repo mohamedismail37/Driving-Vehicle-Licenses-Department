@@ -1,27 +1,67 @@
-# Driving-Vehicle-Licenses-Department
-The DVLD system is a C# (WinForms) and SQL Server desktop application designed to digitize driver and vehicle licensing operations. It follows a 3-tier architecture (Presentation, Business Logic, Data Access) and supports full CRUD operations for managing people, licenses, and vehicles.
+<div align="center">
+<a href="https://github.com/mohamedismail37/Driving-Vehicle-Licenses-Department" rel="Title">
+  
+![DVLD-Title](assets/Title.png)
+</a>
+</div>
+
+<h3 align="center">Driving Vehicle Licenses Department</h3>
+
+### About The Project
+> **DVLD** Developed a **C# .NET** Desktop application simulating real-world driver’s license issuance workflows
 
 ---
+## Table of Contents
 
-## Architecture
-
-The project follows the **3-Tier Architecture**:
-
-1. **Presentation Layer (UI):**
-   - Built with Windows Forms.
-   - Handles all user interactions, such as buttons, forms, validation on the UI tier and DataGridViews.
-
-2. **Business Logic Layer (BLL):**
-   - Contains the core application logic and rules.
-   - Validates data and ensures system consistency.
-   - Acts as a bridge between the UI and the Data Access Layer.
-
-3. **Data Access Layer (DAL):**
-   - Uses ADO.NET to interact with SQL Server.
-   - Responsible for all CRUD operations (Create, Read, Update, Delete).
+- [Project Description](#-project-description)
+  - [Overview](#-overview)
+  - [Objectives](#-objectives)
+  - [Built With](#-built-with)
+- [Main Features](#-main-features)
+- [Screenshots / UI Preview](#-screenshots--ui-preview)
+- [Architecture & Database Design](#-architecture--database-design)
+- [File Structure](#-file-structure)
+- [Future Enhancements](#-future-enhancements)
 
 ---
+## Project Description
 
+### Overview
+The Driving & Vehicle Licensing Department (DVLD) is a full-stack desktop application developed using C# and .NET Framework.  
+The system simulates core workflows of a real-world licensing department, including people management, user management, applications, tests, etc.  
+It is built with a clear focus on clean architecture, data validation, and maintainable code structure.
+
+### Objectives
+- Apply the **3-Tier Architecture** (Presentation, Business Logic, Data Access)
+- Build a real-world–like system with **complete CRUD operations**
+- Practice **WinForms UI development** with proper validation and user experience
+- Design a **normalized SQL Server database** with relationships and constraints
+
+### Built With
+- **C# (.NET Framework)**
+- **WinForms** 
+- **ADO.NET**
+- **SQL Server**
+- **3-Tier Architecture**
+- **Git & GitHub**
+
+---
+## Main Features
+
+### Authentication & Account Management
+- Secure login system with username & password validation
+- Active user check before allowing access
+- “Remember Me” functionality
+- Change password with validation
+- View current user information (without sensitive data)
+- Logout functionality
+
+| Login | Main Screen |
+|-------|-------------|
+| ![](assets/Login.png) | ![](assets/Main.png) |
+
+
+---
 ## Main Features
 
 ### Main Page (Dashboard)
@@ -81,6 +121,25 @@ Displays complete personal information, including photo and contact details.
 Enables editing and updating existing records with validation and automatic UI refresh.  
 
 ![Update/Edit Person](assets/UpdatePerson.png)
+
+---
+
+## Architecture
+
+The project follows the **3-Tier Architecture**:
+
+1. **Presentation Layer (UI):**
+   - Built with Windows Forms.
+   - Handles all user interactions, such as buttons, forms, validation on the UI tier and DataGridViews.
+
+2. **Business Logic Layer (BLL):**
+   - Contains the core application logic and rules.
+   - Validates data and ensures system consistency.
+   - Acts as a bridge between the UI and the Data Access Layer.
+
+3. **Data Access Layer (DAL):**
+   - Uses ADO.NET to interact with SQL Server.
+   - Responsible for all CRUD operations (Create, Read, Update, Delete).
 
 ---
 
