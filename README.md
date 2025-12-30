@@ -195,6 +195,7 @@ This separation ensures:
 
 ## File Structure
                             
+```text
 Driving-Vehicle-Licenses-Department/
 ├── BusinessLogicLayer/       # Contains core business logic and rules
 ├── DataAccessLayer/          # Handles all database interactions using ADO.NET
@@ -205,7 +206,6 @@ Driving-Vehicle-Licenses-Department/
 │   ├── Users Management/
 │   └── Test Types/
 ├── README.md                 # Project documentation
-
 
 
 
