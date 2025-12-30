@@ -13,11 +13,11 @@
 ---
 ## Table of Contents
 
-- [Project Description](#-project-description)
-  - [Overview](#-overview)
-  - [Objectives](#-objectives)
-  - [Built With](#-built-with)
-- [Main Features](#-main-features)
+- [Project Description](#project-description)
+  - [Overview](#overview)
+  - [Objectives](#objectives)
+  - [Built With](#built-with)
+- [Main Features](#main-features)
 - [Screenshots / UI Preview](#-screenshots--ui-preview)
 - [Architecture & Database Design](#-architecture--database-design)
 - [File Structure](#-file-structure)
