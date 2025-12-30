@@ -60,9 +60,19 @@ It is built with a clear focus on clean architecture, data validation, and maint
 |-------|---------------------------------------|
 | ![](assets/Login.png) | ![](assets/Users%20Management/MainAccountSettingsMenu.png) | 
 
-
 ---
-## Main Features
+###  People Management
+- View & List all people in a DataGridView
+- Advanced filtering (Person ID, Name, Email, etc.)
+- Input validation (letters-only for names, numbers-only for IDs)
+- Context menu actions:
+  - View person details
+  - Update person information
+  - Delete person (with safety checks)
+
+| Manage People List | Context Menu | All Filter | Filter Used |
+|--------------------|--------------|------------|-------------|
+| ![](assets/People%20Management/ManagePeopleList.png) | ![](assets/People%20Management/ManagePeopleContextMenu.png) | ![](assets/People%20Management/ManagePeopleFilters.png) | ![](assets/People%20Management/ManagePeopleFilter.png) |
 
 ---
 
