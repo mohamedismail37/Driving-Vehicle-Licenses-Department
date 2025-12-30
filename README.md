@@ -70,9 +70,13 @@ It is built with a clear focus on clean architecture, data validation, and maint
   - Update person information
   - Delete person (with safety checks)
 
-| Manage People List | Context Menu | All Filter | Filter Used |
-|--------------------|--------------|------------|-------------|
-| ![](assets/People%20Management/ManagePeopleList.png) | ![](assets/People%20Management/ManagePeopleContextMenu.png) | ![](assets/People%20Management/ManagePeopleFilters.png) | ![](assets/People%20Management/ManagePeopleFilter.png) |
+| Manage People List | Context Menu |
+|--------------------|--------------|
+| ![](assets/People%20Management/ManagePeopleList.png) | ![](assets/People%20Management/ManagePeopleContextMenu.png) |
+
+| All Filters | Filter Used |
+|-------------|-------------|
+| ![](assets/People%20Management/ManagePeopleFilters.png) | ![](assets/People%20Management/ManagePeopleFilter.png) |
 
 ---
 
