@@ -56,20 +56,13 @@ It is built with a clear focus on clean architecture, data validation, and maint
 - View current user information (without sensitive data)
 - Logout functionality
 
-| Login | Main Screen |
-|-------|-------------|
-| ![](assets/Login.png) | ![](assets/Main.png) |
+| Login | Main Screen with account setting menu |
+|-------|---------------------------------------|
+| ![](assets/Login.png) | ![](assets/Users-Management\MainAccountSettingsMenu.png) | 
 
 
 ---
 ## Main Features
-
-### Main Page (Dashboard)
-
-The main page serves as the system’s control panel, allowing users to quickly access all modules such as **Applications**, **People**, **Users**, **Drivers**, and **Licenses**.  
-From here, administrators can open any section to perform management tasks efficiently.
-
-![Main Page Screenshot](assets/Main.png)
 
 ---
 
