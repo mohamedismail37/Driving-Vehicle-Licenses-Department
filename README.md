@@ -213,14 +213,15 @@ Driving-Vehicle-Licenses-Department/
 
 ## Future Enhancements
 
-- [x] Implemented **People Management** with add, update, delete, and search features
-- [x] Implemented **Users Management** with user creation, update, password change, and validation
-- [x] Implemented **Test Types** and **Application Types** management with full CRUD
-- [x] Created **SQL Server database** with 13 tables, proper normalization, and relationships
+- [x] ~~Implemented **People Management** with add, update, delete, and search features~~
+- [x] ~~Implemented **Users Management** with user creation, update, password change, and validation~~
+- [x] ~~Implemented **Test Types** and **Application Types** management with full CRUD~~
+- [x] ~~Created **SQL Server database** with 13 tables, proper normalization, and relationships~~
 - [ ] Add **Deployment and Setup (Installation)** section
 - [ ] Provide a deeper explanation of the **Database** with photos
 - [ ] Add **Applications, Drivers, and License features**
 - [ ] Create a **video explaining the program**
+- [ ] Add the New features on **GitHub** and enhance the README and recheck for any grammar mistakes, etc. 
 
 ---
 
