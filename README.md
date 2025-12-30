@@ -122,6 +122,27 @@ It is built with a clear focus on clean architecture, data validation, and maint
 
 ---
 
+### 🗂 Applications & Test Types
+- List and manage application types
+- Update application settings
+- List and update test types
+
+#### Manage Test Types:
+| List all Test Types | Update Test Type | 
+|---------------------|--------------------|
+| ![](assets/Test%20Types/ManageTestTypes.png) | ![](assets/Test%20Types/UpdateTestType.png) |
+
+#### Manage Application Types:
+| Application Menu in Dashboard | List Application Types | 
+|-------------------------------|------------------------|
+| ![](assets/Applications/MainApplicationsMenu.png) | ![](assets/Applications/Application%20Type/ManageApplicationTypes.png) |
+
+| Context Menu | Update Application Type | 
+|--------------|-------------------------|
+| ![](assets/Applications/Application%20Type/ManageApplicationTypesContextMenu.png) | ![](assets/Applications/Application%20Type/UpdateApplicationType.png) |
+
+
+---
 ## Architecture
 
 The project follows the **3-Tier Architecture**:
