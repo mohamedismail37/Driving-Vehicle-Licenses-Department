@@ -29,6 +29,7 @@
 - [Architecture & Database Design](#architecture--database-design)
 - [Technical Highlights](#Technical-Highlights)
 - [File Structure](#file-structure)
+- [Database](#Database-design)
 - [Future Enhancements](#future-enhancements)
 - [Contributers](#Contributers)
 
@@ -268,14 +269,6 @@ This separation ensures:
 - Easier testing and debugging
 - Clean, scalable codebase
 
-### Database Design
-- SQL Server database with **13 normalized tables**
-- Proper use of:
-  - Primary & Foreign Keys
-  - NOT NULL & NULL constraints
-  - Relationships between entities
-- Designed following **database normal forms (1NF → 3NF)**
-
 ---
 ## Technical Highlights
 - **3-Tier Architecture:** Separation of Presentation, Business Logic, and Data Access layers for maintainability and scalability.  
@@ -297,13 +290,22 @@ Driving-Vehicle-Licenses-Department/
 ├── DataAccessLayer/          # Handles all database interactions using ADO.NET
 ├── DVLD/                     # Presentation layer with WinForms UI
 ├── assets/                   # Screenshots and images organized by feature
-│   ├── Applications/
-│   ├── People Management/
-│   ├── Users Management/
-│   └── Test Types/
 ├── README.md                 # Project documentation
 ```
 ---
+
+---
+
+## Database Design
+- SQL Server database with **13 normalized tables**
+- Proper use of:
+  - Primary & Foreign Keys
+  - NOT NULL & NULL constraints
+  - Relationships between entities
+- Designed following **database normal forms (1NF → 3NF)**
+
+### Database Schema
+![Database Schema photo](assets/DataBase%20Schema.png)
 
 ## Future Enhancements
 
@@ -312,8 +314,8 @@ Driving-Vehicle-Licenses-Department/
 - [x] ~~Implemented **Test Types** and **Application Types** management with full CRUD~~
 - [x] ~~Created **SQL Server database** with 13 tables, proper normalization, and relationships~~
 - [ ] Add **Deployment and Setup (Installation)** section
-- [ ] Provide a deeper explanation of the **Database** with photos
-- [ ] Add **Applications, Drivers, and License features**
+- [x] ~~Provide a deeper explanation of the **Database** with photos~~
+- [x] ~~Add **Applications, Drivers, and License features**~~
 - [ ] Create a **video explaining the program**
 - [ ] Add the New features on **GitHub** and enhance the README and recheck for any grammar mistakes, etc. 
 
