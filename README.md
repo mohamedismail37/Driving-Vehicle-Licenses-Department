@@ -29,7 +29,6 @@
 - [Architecture & Database Design](#architecture--database-design)
 - [Technical Highlights](#Technical-Highlights)
 - [File Structure](#file-structure)
-- [Database](#Database-design)
 - [Future Enhancements](#future-enhancements)
 - [Contributers](#Contributers)
 
@@ -269,6 +268,17 @@ This separation ensures:
 - Easier testing and debugging
 - Clean, scalable codebase
 
+### Database Design
+- SQL Server database with **13 normalized tables**
+- Proper use of:
+  - Primary & Foreign Keys
+  - NOT NULL & NULL constraints
+  - Relationships between entities
+- Designed following **database normal forms (1NF → 3NF)**
+
+### Database Schema
+![Database Schema photo](assets/DataBase%20Schema.png)
+
 ---
 ## Technical Highlights
 - **3-Tier Architecture:** Separation of Presentation, Business Logic, and Data Access layers for maintainability and scalability.  
@@ -292,20 +302,8 @@ Driving-Vehicle-Licenses-Department/
 ├── assets/                   # Screenshots and images organized by feature
 ├── README.md                 # Project documentation
 ```
----
 
 ---
-
-## Database Design
-- SQL Server database with **13 normalized tables**
-- Proper use of:
-  - Primary & Foreign Keys
-  - NOT NULL & NULL constraints
-  - Relationships between entities
-- Designed following **database normal forms (1NF → 3NF)**
-
-### Database Schema
-![Database Schema photo](assets/DataBase%20Schema.png)
 
 ## Future Enhancements
 
