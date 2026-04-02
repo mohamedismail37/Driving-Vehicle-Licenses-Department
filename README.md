@@ -22,6 +22,10 @@
   - [People Management](#People-Management)
   - [Users Management](#Users-Management)
   - [Applications & Test Types](#Applications-&-Test-Types)
+  - [Drivers Management](#Drivers-Management)
+  - [Tests](#Tests)
+  - [Licenses](#Licenses)
+
 - [Architecture & Database Design](#architecture--database-design)
 - [Technical Highlights](#Technical-Highlights)
 - [File Structure](#file-structure)
@@ -207,7 +211,7 @@ It is built with a clear focus on clean architecture, data validation, and maint
 |----------------------------|-------------|
 | ![](assets/Licenses/International%20License/IssueInternationalLicense.png) | ![](assets/Licenses/International%20License/ValidationOnIssuingInternationalLicense.png) |
 
-![List International License](assetsLicenses/International%20License/ValidationOnIssuingInternationalLicense/ListInternationalLicenses.png)
+![List International License](assets/Licenses/International%20License/ListInternationalLicenses.png)
 
 #### Detain and Release Licenses:
 | Detain License Screen | Success Detaining License | Release Detained License |
@@ -237,7 +241,6 @@ It is built with a clear focus on clean architecture, data validation, and maint
 |-----------------------|-----------------------|-----------------------|
 | ![](assets/Licenses/Local%20License/LDLAContextMenuStripe.png) | ![](assets/Licenses/Local%20License/LDLACMS2.png) | ![](assets/Licenses/Local%20License/LDLACMS3.png) 
 
----
 
 ### Screenshots
 You can place all screenshots inside a `/assets` folder
