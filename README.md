@@ -147,6 +147,97 @@ It is built with a clear focus on clean architecture, data validation, and maint
 |--------------|-------------------------|
 | ![](assets/Applications/Application%20Types/ManageApplicationTypesContextMenu.png) | ![](assets/Applications/Application%20Types/UpdateApplicationType.png) |
 
+---
+### Drivers Management
+- View all Drivers with filtering options
+- Filter by Driver ID, Person ID, or National No.
+- The Driver had been created automatically when he issued a license for the first time
+- Can see through the list table the Driver(person) info
+- Also, can see his license history 
+
+#### Manage Drivers:
+| Manage Drivers | Search Filters | Context Menu Stripe |
+|----------------|----------------|---------------------|
+| ![](assets/Drivers/ManageDrivers.png) | ![](assets/Drivers/ListDriversWithFilters.png) | ![](assets/Drivers/ManageDriversCMS.png) 
+
+---
+
+### Tests:
+- From here, the user can schedule a Test Appointment for an applicant
+- With a data view for all past appointments and their results
+- Also, the user can change the appointment date without any extra fees
+- In taking the test form, the user put input results *(Pass or Fail)* and if there are any notes `like if he needs glasses, etc.`
+
+#### Tests Appointments:
+| Vision Test | Written Test | Street Test |
+|-------------|--------------|-------------|
+| ![](assets/Test%20Appointments/EditAppointmentOrTakeTest.png) | ![](assets/Test%20Appointments/WrittenTestAppointment.png) | ![](assets/Test%20Appointments/StreetTestAppointment.png) 
+
+| Schedule Test | Take Test | 
+|---------------|-----------|
+| ![](assets/Test%20Appointments/ScheduleVisionTest.png) | ![](assets/Test%20Appointments/TakingTestScreen.png) |
+
+---
+
+### Licenses:
+- All Operations that can be done on a license, like:
+- Issue for the first Time, show its info
+- Issue Local License, or International License and the validations on them
+- Detain License, then Release the Detained License
+- Renew the license when it expires
+- Replacement for both situations of damage or loss of the license
+- Complex Logic behind the Local Driving License Application screen
+
+#### Show Person License History & Issue for the first time:
+| Local License History | International License History | 
+|-----------------------|-------------------------------|
+| ![](assets/Licenses/PersonLocalLicenseHistory.png) | ![](assets/Licenses/PersonInternationalLicenseHistory.png) |
+
+| Show Driver License Info | Issue License For First Time | 
+|--------------------------|------------------------------|
+| ![](assets/Licenses/ShowDriverLicenseInfo.png) | ![](assets/Licenses/IssueLicenseForFirstTimeScreen.png) |
+
+#### Renew (Validations) / Replacement for Damage or loss of License:
+| Renew expired License | Replacement for Damage | Replacement for Loss |
+|-----------------------|------------------------|----------------------|
+| ![](assets/Licenses/RenewLicenseAuthentication.png) | ![](assets/Licenses/ReplacementForDamagedLicense.png) | ![](assets/Licenses/ReplacementForLostLicense.png) 
+
+#### International License:
+| Issue Internationa License | Validations | 
+|----------------------------|-------------|
+| ![](assets/Licenses/International%20License/IssueInternationalLicense.png) | ![](assets/Licenses/International%20License/ValidationOnIssuingInternationalLicense.png) |
+
+![List International License](assetsLicenses/International%20License/ValidationOnIssuingInternationalLicense/ListInternationalLicenses.png)
+
+#### Detain and Release Licenses:
+| Detain License Screen | Success Detaining License | Release Detained License |
+|-----------------------|---------------------------|--------------------------|
+| ![](assets/Licenses/Detain%20License/DetainLicense.png) | ![](assets/Licenses/Detain%20License/SuccessDetainaingLicense.png) | ![](assets/Licenses/Detain%20License/ReleaseDetainedLicense.png) 
+
+
+| Manage Detained Licenses | Search with filters | 
+|--------------------------|---------------------|
+| ![](assets/Licenses/Detain%20License/ManageDetainedLicenes.png) | ![](assets/Licenses/Detain%20License/SearchForDetainedLicenseWithFilters.png) |
+
+#### Local Driving License (applications):
+
+| New Local Driving License App P1 | New Local Driving License App P2 | 
+|----------------------------------|----------------------------------|
+| ![](assets/Licenses/Local%20License/NewLocalDrivingLicenseApplication1.png) | ![](assets/Licenses/Local%20License/NewLocalDrivingLicenseApplication2.png) |
+
+| Choose License Class | Authentication on License Class | 
+|----------------------|---------------------------------|
+| ![](assets/Licenses/Local%20License/ChooseLicenseClassForLicenseApplication.png) | ![](assets/Licenses/Local%20License/AuthenticationOnLicenseApplication.png) |
+
+| Manage Local Driving License Applications | Search with Filters | 
+|-------------------------------------------|---------------------|
+| ![](assets/Licenses/Local%20License/ListLocalDrivingLicenseApplications.png) | ![](assets/Licenses/Local%20License/LocalDrivingLicenseWithSearchFilters.png) |
+
+| Context Menu Stripe 1 | Context Menu Stripe 2 | Context Menu Stripe 3 |
+|-----------------------|-----------------------|-----------------------|
+| ![](assets/Licenses/Local%20License/LDLAContextMenuStripe.png) | ![](assets/Licenses/Local%20License/LDLACMS2.png) | ![](assets/Licenses/Local%20License/LDLACMS3.png) 
+
+---
 
 ### Screenshots
 You can place all screenshots inside a `/assets` folder
