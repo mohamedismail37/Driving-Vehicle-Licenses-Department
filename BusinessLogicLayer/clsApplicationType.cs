@@ -55,6 +55,10 @@ namespace BusinessLogicLayer
                 return null;
         }
 
+        public static string GetApplicationTypeTitle(int ApplicationTypeID)
+        {
+            return DataAccessLayer.clsApplicationTypesData.GetApplicationTypeTitle(ApplicationTypeID);
+        }
 
     }
 }

@@ -164,7 +164,7 @@ namespace DataAccessLayer
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "Select UserID , Users.PersonID , People.FirstName + ' ' + People.SecondName + ' ' + People.ThirdName + ' ' + People.LastName as 'Full Name',UserName , IsActive From Users Join People On Users.PersonID = People.PersonID;";
+            string query = "Select UserID , Users.PersonID , People.FirstName + ' ' + People.SecondName + ' ' + IsNull(People.ThirdName, ' ') + People.LastName as 'Full Name',UserName , IsActive From Users Join People On Users.PersonID = People.PersonID;";
 
             SqlCommand command = new SqlCommand(query, connection);
 

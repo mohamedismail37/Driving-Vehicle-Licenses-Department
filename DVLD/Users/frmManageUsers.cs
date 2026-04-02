@@ -114,7 +114,7 @@ namespace DVLD.Users
                     break;
             }
 
-            lblNumRecords.Text = _dtUsers.Rows.Count.ToString();
+            lblNumRecords.Text = dgvAllUsers.Rows.Count.ToString();
         }
 
         private void txtFilteration_TextChanged(object sender, EventArgs e)
@@ -143,7 +143,7 @@ namespace DVLD.Users
             if (txtFilteration.Text.Trim() == "" || filterColumn == "None")
             {
                 _dtUsers.DefaultView.RowFilter = "";
-                lblNumRecords.Text = _dtUsers.Rows.Count.ToString();
+                lblNumRecords.Text = dgvAllUsers.Rows.Count.ToString();
                 return;
             }
 
@@ -156,7 +156,7 @@ namespace DVLD.Users
                 _dtUsers.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", filterColumn, txtFilteration.Text.Trim());
             }
 
-            lblNumRecords.Text = _dtUsers.Rows.Count.ToString();
+            lblNumRecords.Text = dgvAllUsers.Rows.Count.ToString();
 
         }
 

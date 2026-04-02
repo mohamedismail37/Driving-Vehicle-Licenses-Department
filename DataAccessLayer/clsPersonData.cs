@@ -112,6 +112,8 @@ namespace DataAccessLayer
                     Address = (string)reader["Address"];
                     Phone = (string)reader["Phone"];
 
+                    NationalityCountryID = (int)reader["NationalityCountryID"];
+
                     // Email: allows null in DB so we should handle null
                     Email = (reader["Email"] != DBNull.Value) ? (string)reader["Email"] : "";
 
@@ -416,11 +418,9 @@ namespace DataAccessLayer
 
             return isFound;
         }
-
-        ////////////////////////////////////////////////////////////
-        // MINE //
         private static bool _IsApplicant(int PersonID)
         {
+            // this should be in BLL not here!..
             bool IsApplicant = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 

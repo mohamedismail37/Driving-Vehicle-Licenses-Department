@@ -117,5 +117,42 @@ namespace DataAccessLayer
             return (rowsAffected > 0);
         }
 
+        public static string GetApplicationTypeTitle(int ApplicationTypeID)
+        {
+            string ApplicationTypeTitle = "";
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = @"Select ApplicationTypeTitle From ApplicationTypes
+                             Where ApplicationTypeID = @ApplicationTypeID;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    ApplicationTypeTitle = reader["ApplicationTypeTitle"].ToString();
+                }
+
+                reader.Close();
+            }
+            catch
+            {
+                //
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return ApplicationTypeTitle;
+        }
     }
 }
