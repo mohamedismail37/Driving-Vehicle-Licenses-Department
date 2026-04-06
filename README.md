@@ -207,7 +207,7 @@ It is built with a clear focus on clean architecture, data validation, and maint
 | ![](assets/Licenses/RenewLicenseAuthentication.png) | ![](assets/Licenses/ReplacementForDamagedLicense.png) | ![](assets/Licenses/ReplacementForLostLicense.png) 
 
 #### International License:
-| Issue Internationa License | Validations | 
+| Issue International License | Validations | 
 |----------------------------|-------------|
 | ![](assets/Licenses/International%20License/IssueInternationalLicense.png) | ![](assets/Licenses/International%20License/ValidationOnIssuingInternationalLicense.png) |
 
