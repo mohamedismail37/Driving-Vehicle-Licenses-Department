@@ -93,7 +93,7 @@ It is built with a clear focus on clean architecture, data validation, and maint
 | ![](assets/People%20Management/PersonDetails.png) | ![](assets/People%20Management/UpdatePerson.png) |
 
 #### Add New Person:
-| Validation for entities | Live validatoin with DB | 
+| Validation for entities | Live validation with DB | 
 |-------------------------|-------------------------|
 | ![](assets/People%20Management/AddNewPersonValidation.png) | ![](assets/People%20Management/LiveValidation.png) |
 
