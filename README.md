@@ -65,6 +65,7 @@ It is built with a clear focus on clean architecture, data validation, and maint
 - Change password with validation
 - View current user information (without sensitive data)
 - Logout functionality
+- Uses ***Windows Registry*** to save the info
 
 | Login | Main Screen with account setting menu |
 |-------|---------------------------------------|
@@ -288,7 +289,8 @@ This separation ensures:
 - **Input Validation & Security:** Live validation in forms, type restrictions, masked passwords, and safe deletion logic.  
 - **Reusable Components:** Custom controls for repeated UI patterns, such as PersonCardWithFilters.  
 - **Structured File Organization:** Separate projects for Presentation, Business Logic, and Data Access layers.  
-- **Scalable & Extensible:** Designed to allow adding new features or tables without major refactoring.  
+- **Scalable & Extensible:** Designed to allow adding new features or tables without major refactoring.
+- **Registry-Based Persistence:** Implemented “Remember Me” using Windows Registry (`HKEY_CURRENT_USER\Software\DVLD`) for seamless state persistence and integration with the OS.
 
 ---
 
@@ -316,6 +318,7 @@ Driving-Vehicle-Licenses-Department/
 - [x] ~~Add **Applications, Drivers, and License features**~~
 - [ ] Create a **video explaining the program**
 - [ ] Add the New features on **GitHub** and enhance the README and recheck for any grammar mistakes, etc. 
+- [x] ~~Migrate “Remember Me” from local file storage to Windows Registry (`HKEY_CURRENT_USER\Software\DVLD`) for cleaner integration and improved reliability.~~
 
 ---
 
