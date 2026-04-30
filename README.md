@@ -93,7 +93,7 @@ It is built with a clear focus on clean architecture, data validation, and maint
 | ![](assets/People%20Management/PersonDetails.png) | ![](assets/People%20Management/UpdatePerson.png) |
 
 #### Add New Person:
-| Validation for entities | Live validatoin with DB | 
+| Validation for entities | Live validation with DB | 
 |-------------------------|-------------------------|
 | ![](assets/People%20Management/AddNewPersonValidation.png) | ![](assets/People%20Management/LiveValidation.png) |
 
@@ -207,7 +207,7 @@ It is built with a clear focus on clean architecture, data validation, and maint
 | ![](assets/Licenses/RenewLicenseAuthentication.png) | ![](assets/Licenses/ReplacementForDamagedLicense.png) | ![](assets/Licenses/ReplacementForLostLicense.png) 
 
 #### International License:
-| Issue Internationa License | Validations | 
+| Issue International License | Validations | 
 |----------------------------|-------------|
 | ![](assets/Licenses/International%20License/IssueInternationalLicense.png) | ![](assets/Licenses/International%20License/ValidationOnIssuingInternationalLicense.png) |
 
@@ -276,6 +276,9 @@ This separation ensures:
   - Relationships between entities
 - Designed following **database normal forms (1NF → 3NF)**
 
+### Database Schema
+![Database Schema photo](assets/DataBase%20Schema.png)
+
 ---
 ## Technical Highlights
 - **3-Tier Architecture:** Separation of Presentation, Business Logic, and Data Access layers for maintainability and scalability.  
@@ -297,12 +300,9 @@ Driving-Vehicle-Licenses-Department/
 ├── DataAccessLayer/          # Handles all database interactions using ADO.NET
 ├── DVLD/                     # Presentation layer with WinForms UI
 ├── assets/                   # Screenshots and images organized by feature
-│   ├── Applications/
-│   ├── People Management/
-│   ├── Users Management/
-│   └── Test Types/
 ├── README.md                 # Project documentation
 ```
+
 ---
 
 ## Future Enhancements
@@ -312,8 +312,8 @@ Driving-Vehicle-Licenses-Department/
 - [x] ~~Implemented **Test Types** and **Application Types** management with full CRUD~~
 - [x] ~~Created **SQL Server database** with 13 tables, proper normalization, and relationships~~
 - [ ] Add **Deployment and Setup (Installation)** section
-- [ ] Provide a deeper explanation of the **Database** with photos
-- [ ] Add **Applications, Drivers, and License features**
+- [x] ~~Provide a deeper explanation of the **Database** with photos~~
+- [x] ~~Add **Applications, Drivers, and License features**~~
 - [ ] Create a **video explaining the program**
 - [ ] Add the New features on **GitHub** and enhance the README and recheck for any grammar mistakes, etc. 
 
