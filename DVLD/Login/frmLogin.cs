@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogicLayer;
-using System.IO;
+using Microsoft.Win32;
 
 namespace DVLD
 {
@@ -35,20 +35,54 @@ namespace DVLD
                 {
                     clsGlobalSettings.LoggedInUser = user;
 
+                    string keyPath = @"HKEY_CURRENT_USER\Software\DVLD";
+                    string valueName1 = "UserName";
+                    string valueName2 = "Password";
+
                     if (cbRemeberMe.Checked)
                     {
-                        File.WriteAllLines("rememberme.txt", new string[]
+                        string valueData1 = txtUserName.Text;
+                        string valueData2 = txtPassword.Text;
+
+                        try
                         {
-                            txtUserName.Text,
-                            txtPassword.Text
-                        });
+                            Registry.SetValue(keyPath, valueName1, valueData1, RegistryValueKind.String);
+                            Registry.SetValue(keyPath, valueName2, valueData2, RegistryValueKind.String);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"An error occured: {ex.Message}");
+                        }
+
                     }
                     else
                     {
-                        if (File.Exists("rememberme.txt"))
+                        try
                         {
-                            File.Delete("rememberme.txt");
+                            string keyPath2 = @"Software\DVLD";
+                            // Open the registry key in read/write mode with explicit registry view
+                            using (RegistryKey baseKey = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Registry64))
+                            {
+                                using (RegistryKey key = baseKey.OpenSubKey(keyPath2 , true))
+                                {
+                                    if (key != null)
+                                    {
+                                        // Delete the specified value
+                                        key.DeleteValue(valueName1);
+                                        key.DeleteValue(valueName2);
+                                    }
+                                }
+                            }
                         }
+                        catch (UnauthorizedAccessException)
+                        {
+                            MessageBox.Show("UnauthorizedAccessException: Run the program with administrative privileges.");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"An error occurred: {ex.Message}");
+                        }
+
                     }
 
                     Form frm = new frmMain();
@@ -70,14 +104,27 @@ namespace DVLD
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            if (File.Exists("rememberme.txt"))
+            string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD";
+            string valueName1 = "UserName"; // here the value that you want to read
+            string valueName2 = "Password";
+            try
             {
-                string[] data = File.ReadAllLines("rememberme.txt");
-                if (data.Length >= 2)
+                // Read the value to the Registry
+                string UserName = Registry.GetValue(keyPath, valueName1, null) as string;
+                string Password = Registry.GetValue(keyPath, valueName2, null) as string;
+
+                if (UserName != null)
                 {
-                    txtUserName.Text = data[0];
-                    txtPassword.Text = data[1];
+                    txtUserName.Text = UserName;
                 }
+                if (Password != null)
+                {
+                    txtPassword.Text = Password;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occured: {ex.Message}");
             }
         }
     }
