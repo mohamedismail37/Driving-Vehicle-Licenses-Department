@@ -66,6 +66,8 @@ It is built with a clear focus on clean architecture, data validation, and maint
 - View current user information (without sensitive data)
 - Logout functionality
 - Uses ***Windows Registry*** to save the info
+- ***Error logging*** via Windows Event Viewer for better debugging and reliability.
+
 
 | Login | Main Screen with account setting menu |
 |-------|---------------------------------------|
@@ -263,6 +265,7 @@ The project follows the **3-Tier Architecture**:
 3. **Data Access Layer (DAL):**
    - Uses ADO.NET to interact with SQL Server.
    - Responsible for all CRUD operations (Create, Read, Update, Delete).
+   - Exception handling with integrated logging to track database operation failures.
 
 This separation ensures:
 - High maintainability
@@ -291,6 +294,8 @@ This separation ensures:
 - **Structured File Organization:** Separate projects for Presentation, Business Logic, and Data Access layers.  
 - **Scalable & Extensible:** Designed to allow adding new features or tables without major refactoring.
 - **Registry-Based Persistence:** Implemented “Remember Me” using Windows Registry (`HKEY_CURRENT_USER\Software\DVLD`) for seamless state persistence and integration with the OS.
+- **Error Logging System:** Captures and records runtime exceptions using Windows Event Viewer to improve system reliability and debugging.
+
 
 ---
 
