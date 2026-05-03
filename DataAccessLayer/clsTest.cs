@@ -38,9 +38,9 @@ namespace DataAccessLayer
                 }
 
             }
-            catch 
+            catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -80,9 +80,9 @@ namespace DataAccessLayer
                 }
 
             }
-            catch
+            catch (Exception ex)
             {
-
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -126,9 +126,9 @@ namespace DataAccessLayer
                     TestID = insertedID;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {

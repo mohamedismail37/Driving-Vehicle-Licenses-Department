@@ -48,8 +48,8 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                //
                 isFound = false;
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -98,6 +98,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
+                clsEventLogger.LogException(ex);
                 isFound = false;
             }
             finally
@@ -148,8 +149,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLogger.LogException(ex);
                 isFound = false;
             }
             finally
@@ -183,7 +183,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -214,7 +214,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                // To logs later
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -245,7 +245,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -278,6 +278,7 @@ namespace DataAccessLayer
             catch (Exception ex)
             {
                 isFound = false;
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -317,7 +318,7 @@ namespace DataAccessLayer
             }
             catch(Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -349,9 +350,9 @@ namespace DataAccessLayer
                 connection.Open();
                 rowsAffected = command.ExecuteNonQuery();
             }
-            catch
+            catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -379,9 +380,9 @@ namespace DataAccessLayer
 
                 rowsAffected = command.ExecuteNonQuery();
             }
-            catch
+            catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -412,7 +413,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                
+                clsEventLogger.LogException(ex);
             }
 
             finally

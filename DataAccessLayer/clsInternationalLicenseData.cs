@@ -38,10 +38,9 @@ namespace DataAccessLayer
                 }
                 reader.Close();
             }
-
-            catch
+            catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -72,7 +71,7 @@ namespace DataAccessLayer
                 isFound = reader.HasRows;
 
             }
-            catch  {       }
+            catch  (Exception ex) { clsEventLogger.LogException(ex); }
 
             finally
             {
@@ -116,9 +115,9 @@ namespace DataAccessLayer
                     InternationalLicenseID = insertedID;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -167,10 +166,10 @@ namespace DataAccessLayer
 
                 reader.Close();
             }
-            catch
+            catch (Exception ex)
             {
-                //
                 isFound = false;
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -219,10 +218,10 @@ namespace DataAccessLayer
 
                 reader.Close();
             }
-            catch
+            catch (Exception ex)
             {
-                //
                 isFound = false;
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -257,9 +256,9 @@ namespace DataAccessLayer
                 reader.Close();
             }
 
-            catch
+            catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {

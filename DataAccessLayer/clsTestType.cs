@@ -35,7 +35,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                // To Logger
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -76,9 +76,10 @@ namespace DataAccessLayer
 
                 reader.Close();
             }
-            catch
+            catch (Exception ex)
             {
                 isFound = false;
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -113,9 +114,9 @@ namespace DataAccessLayer
                 connection.Open();
                 rowsAffected = command.ExecuteNonQuery();
             }
-            catch
+            catch (Exception ex)
             {
-
+                clsEventLogger.LogException(ex);
             }
             finally
             {

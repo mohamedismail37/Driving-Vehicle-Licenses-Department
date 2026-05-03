@@ -39,9 +39,9 @@ namespace DataAccessLayer
                     DriverID = insertedID;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -74,7 +74,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                // To logs later
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -118,10 +118,10 @@ namespace DataAccessLayer
 
                 reader.Close();
             }
-            catch
+            catch (Exception ex)
             {
-                //
                 isFound = false;
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -164,10 +164,10 @@ namespace DataAccessLayer
 
                 reader.Close();
             }
-            catch
+            catch (Exception ex)
             {
-                //
                 isFound = false;
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -207,7 +207,7 @@ namespace DataAccessLayer
 
             catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {

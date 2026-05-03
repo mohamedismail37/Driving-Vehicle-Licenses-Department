@@ -33,8 +33,10 @@ namespace DataAccessLayer
                 isDetained = reader.HasRows;
 
             }
-            catch
-            { }
+            catch (Exception ex)
+            {
+                clsEventLogger.LogException(ex);
+            }
             finally
             {
                 connection.Close();
@@ -72,9 +74,9 @@ namespace DataAccessLayer
                     DetainedLicenseID = insertedID;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -126,10 +128,10 @@ namespace DataAccessLayer
 
                 reader.Close();
             }
-            catch
+            catch (Exception ex)
             {
-                //
                 isFound = false;
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -164,9 +166,9 @@ namespace DataAccessLayer
                 connection.Open();
                 rowsAffected = command.ExecuteNonQuery();
             }
-            catch
+            catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {
@@ -211,7 +213,7 @@ namespace DataAccessLayer
 
             catch (Exception ex)
             {
-                //
+                clsEventLogger.LogException(ex);
             }
             finally
             {
