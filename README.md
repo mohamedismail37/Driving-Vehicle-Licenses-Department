@@ -66,7 +66,6 @@ It is built with a clear focus on clean architecture, data validation, and maint
 - View current user information (without sensitive data)
 - Logout functionality
 - Uses ***Windows Registry*** to save the info
-- ***Error logging*** via Windows Event Viewer for better debugging and reliability.
 
 
 | Login | Main Screen with account setting menu |
@@ -324,6 +323,8 @@ Driving-Vehicle-Licenses-Department/
 - [ ] Create a **video explaining the program**
 - [ ] Add the New features on **GitHub** and enhance the README and recheck for any grammar mistakes, etc. 
 - [x] ~~Migrate “Remember Me” from local file storage to Windows Registry (`HKEY_CURRENT_USER\Software\DVLD`) for cleaner integration and improved reliability.~~
+- [x]  ~~***Error logging*** via Windows Event Viewer for better debugging and reliability.~~
+
 
 ---
 
