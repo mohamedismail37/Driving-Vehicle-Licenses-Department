@@ -66,6 +66,7 @@ It is built with a clear focus on clean architecture, data validation, and maint
 - View current user information (without sensitive data)
 - Logout functionality
 - Uses ***Windows Registry*** to save the info
+- User passwords are ***hashed*** to prevent plain-text credentials.
 
 
 | Login | Main Screen with account setting menu |
@@ -294,6 +295,7 @@ This separation ensures:
 - **Scalable & Extensible:** Designed to allow adding new features or tables without major refactoring.
 - **Registry-Based Persistence:** Implemented “Remember Me” using Windows Registry (`HKEY_CURRENT_USER\Software\DVLD`) for seamless state persistence and integration with the OS.
 - **Error Logging System:** Captures and records runtime exceptions using Windows Event Viewer to improve system reliability and debugging.
+- **Secure Data Storage:** Only hashed passwords are persisted in the database, with no exposure of sensitive user credentials.
 
 
 ---
@@ -323,8 +325,8 @@ Driving-Vehicle-Licenses-Department/
 - [ ] Create a **video explaining the program**
 - [ ] Add the New features on **GitHub** and enhance the README and recheck for any grammar mistakes, etc. 
 - [x] ~~Migrate “Remember Me” from local file storage to Windows Registry (`HKEY_CURRENT_USER\Software\DVLD`) for cleaner integration and improved reliability.~~
-- [x]  ~~***Error logging*** via Windows Event Viewer for better debugging and reliability.~~
-
+- [x] ~~***Error logging*** via Windows Event Viewer for better debugging and reliability.~~
+- [x] ~~Secure Password Handling: All user ***passwords are hashed using a dedicated PasswordHasher*** before being stored, ensuring no plain-text credentials are saved.~~
 
 ---
 
