@@ -76,6 +76,7 @@ It is built with a clear focus on clean architecture, data validation, and maint
 ---
 ### People Management
 - View & List all people in a DataGridView
+- Uploaded profile pictures are saved to a dedicated folder using a GUID-based filename, with full support for secure storage and file operations.
 - Advanced filtering (Person ID, Name, Email, etc.)
 - Input validation (letters-only for names, numbers-only for IDs)
 - Context menu actions:
