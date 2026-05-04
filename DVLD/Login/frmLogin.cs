@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogicLayer;
 using Microsoft.Win32;
+using BusinessLogicLayer.Security;
 
 namespace DVLD
 {
@@ -47,7 +48,8 @@ namespace DVLD
                         try
                         {
                             Registry.SetValue(keyPath, valueName1, valueData1, RegistryValueKind.String);
-                            Registry.SetValue(keyPath, valueName2, valueData2, RegistryValueKind.String);
+                            string hashedPassword = PasswordHasher.Hash(valueData2);
+                            Registry.SetValue(keyPath, valueName2, hashedPassword, RegistryValueKind.String);
                         }
                         catch (Exception ex)
                         {
@@ -106,21 +108,16 @@ namespace DVLD
         {
             string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD";
             string valueName1 = "UserName"; // here the value that you want to read
-            string valueName2 = "Password";
             try
             {
                 // Read the value to the Registry
                 string UserName = Registry.GetValue(keyPath, valueName1, null) as string;
-                string Password = Registry.GetValue(keyPath, valueName2, null) as string;
 
                 if (UserName != null)
                 {
                     txtUserName.Text = UserName;
                 }
-                if (Password != null)
-                {
-                    txtPassword.Text = Password;
-                }
+
             }
             catch (Exception ex)
             {

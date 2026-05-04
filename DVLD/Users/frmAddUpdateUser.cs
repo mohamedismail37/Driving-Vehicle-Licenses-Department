@@ -70,8 +70,7 @@ namespace DVLD.Users
 
             lblUserID.Text = _User.UserID.ToString();
             txtUserName.Text = _User.UserName;
-            txtPassword.Text = _User.Password;
-            txtConfirmPassword.Text = _User.Password;
+
             cbIsActive.Checked = _User.IsActive;
         }
         private void btnClose_Click(object sender, EventArgs e)

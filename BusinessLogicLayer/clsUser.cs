@@ -1,4 +1,5 @@
-﻿using DataAccessLayer;
+﻿using BusinessLogicLayer.Security;
+using DataAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -45,7 +46,8 @@ namespace BusinessLogicLayer
         private bool _AddNewUser()
         {
             // Call DataAccess Layer
-            this.UserID = clsUserData.AddNewUser(PersonID, UserName, Password, IsActive);
+            string hashedPassword = PasswordHasher.Hash(Password);
+            this.UserID = clsUserData.AddNewUser(PersonID, UserName, hashedPassword, IsActive);
 
             if (UserID != -1)
             {
@@ -58,7 +60,8 @@ namespace BusinessLogicLayer
         private bool _UpdateNewUser()
         {
             // Call DataAccess Layer
-            return (clsUserData.UpdateUser(UserID, UserName, Password, IsActive));
+            string hashedPassword = PasswordHasher.Hash(Password);
+            return (clsUserData.UpdateUser(UserID, UserName, hashedPassword, IsActive));
         }
         public bool Save()
         {

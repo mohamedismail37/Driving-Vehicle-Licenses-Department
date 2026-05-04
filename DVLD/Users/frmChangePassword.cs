@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer;
+using BusinessLogicLayer.Security;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,7 +55,8 @@ namespace DVLD.Users
                 errorProvider1.SetError(txtCurrentPassword, null);
             }
 
-            if (txtCurrentPassword.Text.Trim() != _User.Password)
+            string hashedPassword = PasswordHasher.Hash(txtCurrentPassword.Text.Trim()); /// Here is assuming that all past passwords are already hashed
+            if (hashedPassword != _User.Password)
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtCurrentPassword, "This Password don't match the current Password");
